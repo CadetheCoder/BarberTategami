@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    background-color: rgba(244, 244, 244, 0.3);
 }
 
 .page-content.menu-open .overlay {
@@ -22,7 +23,7 @@ body{
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 99; /* Higher than nav below */
+    z-index: 2; /* Higher than nav below */
 }
 
 /*  Start of Nav */
@@ -95,7 +96,7 @@ header{
     background-color: black;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .lang-switch img {
@@ -117,6 +118,18 @@ header{
 }
 
 /* Hero */
+
+#hero-container{
+    padding-top: 115px;
+}
+
+#hero-img-container{
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 700px;
+}
+
 #hero-overlay{
     position: absolute;
     top: 50%;
@@ -146,10 +159,6 @@ header{
     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);;
 }
 
-#hero-img-box button{
-    position: relative;
-}
-
 #hero-text-box{
     margin: 10px;
     text-align: center;
@@ -157,10 +166,9 @@ header{
 
 #hero-img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 700px;
     object-position: center;
-    padding-top: 100px;
 }
 
 #home-styles-grid{
@@ -204,7 +212,7 @@ header{
     text-align: center;
     font-size: 50px;
     transition: right .3 ease-in-out;
-    z-index: 1;
+    z-index: 4;
     background-color: white;
 }
 
@@ -291,6 +299,17 @@ header{
 
 /* End of Ham Menu */
 
+@media (min-width: 1201px) {
+    .off-screen-menu{
+        display: none;
+    }
+
+    .page-content .overlay {
+        backdrop-filter: blur(0px);
+        background: none;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .ham-menu{
@@ -307,6 +326,13 @@ header{
     }
 }
 
+@media (max-width: 760px){
+    .off-screen-menu{
+        max-width: 760px;
+        right: -770px;
+    }
+}
+
 /* End of 850px Media Query */
 
 .on-screen-menu{
@@ -320,6 +346,38 @@ header{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "home-styles-header home-styles-header"
-    "home-styles-grid home-styles-grid";
+    "desc-img desc-text-container"
+    "google-map-text google-map-container";
+    background-color: white;
+}
+
+#desc-img{
+    width: 600px;
+    grid-area: desc-img;
+    margin: 100px;
+}
+
+#desc-text-container{
+    grid-area: desc-text-container;
+    margin: 100px;
+    margin-left: 25px;
+}
+
+#desc-text-container h2 {
+    font-size: 35px;
+}
+
+#desc-text-container p {
+    font-size: 20px;
+}
+
+#google-map-container{
+    grid-area: google-map-container;
+    margin: 100px;
+    
+}
+
+#google-map-text{
+    grid-area: google-map-text;
+    margin: 100px;
 }
