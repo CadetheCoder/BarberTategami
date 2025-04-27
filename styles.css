@@ -1,8 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-    background-color: rgba(244, 244, 244, 0.3);
+    font-family: 'Inter', sans-serif;
 }
 
 .page-content.menu-open .overlay {
@@ -72,22 +71,6 @@ body{
 }
 /*  End of Nav */
 
-#map{
-    grid-area: map;
-    width: 500px;
-    margin-left: auto;
-    margin-right: 10px;
-}
-
-#info-text-box{
-    grid-area: info-text-box;
-}
-
-#info-header{
-    grid-area: info-header;
-    text-align: center;
-}
-
 section{
     display: contents;
 }
@@ -118,9 +101,8 @@ header{
 }
 
 /* Hero */
-
 #hero-container{
-    padding-top: 115px;
+    padding-top: 105px;
 }
 
 #hero-img-container{
@@ -344,11 +326,45 @@ header{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas: 
     "desc-img desc-text-container"
-    "google-map-text google-map-container";
+    "styles-desc-container styles-img"
+    "google-map-container google-map-text ";
     background-color: white;
+}
+
+#styles-img{
+    grid-area: styles-img;
+    width: 500px;
+    margin-bottom: 100px;
+}
+
+#styles-desc-container{
+    grid-area: styles-desc-container;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+#styles-desc-container h2{
+    font-size: 35px;
+    margin: 0px;
+}
+
+#styles-desc-container p{
+    font-size: 20px;
+}
+
+#styles-desc-container button{
+    width: 200px;
+    border: none;
+    background-color: rgb(255, 60, 60);
+    height: 35px;
+    border-radius: 10px;
+    color: white;
 }
 
 #desc-img{
@@ -359,12 +375,15 @@ header{
 
 #desc-text-container{
     grid-area: desc-text-container;
-    margin: 100px;
-    margin-left: 25px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #desc-text-container h2 {
     font-size: 35px;
+    margin: 0px;
 }
 
 #desc-text-container p {
@@ -380,4 +399,63 @@ header{
 #google-map-text{
     grid-area: google-map-text;
     margin: 100px;
+}
+
+/* Start of Footer */
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+#footer-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyright{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#socials-container{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.social-icons{
+    color: white;
+}
+/* End of Footer */
+
+#reviews-container{
+    background-color: black;
+    padding: 20px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+}
+
+.review-img{
+    width: 500px;
+    border-radius: 10px;
+}
+
+#reviews-header{
+    margin-bottom: 50px;
+}
+
+.reviews-card{
+    width: 300px;
+    font-style: italic;
+}
+
+#review-cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
 }
