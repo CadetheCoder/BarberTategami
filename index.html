@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/logo.png">
   <script src="https://kit.fontawesome.com/91d048407d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <script src="app.js" defer></script>
   <title>barber TATEGAMI</title>
 </head>
@@ -57,7 +58,6 @@
     <main>
 
       <section id="hero">
-        <div id="hero-container">
           <div id="hero-img-container">
             <img id="hero-img" src="images/IMG_03.png" alt="Cozy barbershop with wooden floors and barber chairs">
             <div id="hero-overlay">
@@ -65,34 +65,24 @@
               <button>Book Now</button>
             </div>
           </div>
-        </div>
       </section>
 
       <section>
-        <div id="reviews-container">
-          <div id="review-cards-container">
-
-            <div class="reviews-card">
-              <p>
-                "オーナー夫妻の温かい雰囲気が居心地の良さを最大限まで引き上げています。静かなバーバーをお探しの方はぜひ"
-              </p>
+        <div id="reviews-wrap">
+          <span class="material-symbols-outlined" id="back-btn">
+            arrow_back_ios_new
+          </span>
+          <div id="reviews-gallery">
+            <div>
+              <span>"Best barber shop in Tokyo, hands down. If you are a regular customer, they will even keep a file of your previous requests for future reference :) So professional!"</span>
             </div>
-
-            <div class="reviews-card">
-              <p>
-                "Best barber shop in Tokyo, hands down. If you are a regular customer, they will even keep a file of your previous requests for future reference :) So professional!"
-              </p>
+            <div>
+              <span>"温かい店主、綺麗なお店。また行きたくなる様な所だった。値段も安く出来上がりも満足でした。"</span>
             </div>
-
-            <div class="reviews-card">
-              <p>
-                "仕上がりに大変満足
-                無駄のないサービス
-                マッサージが異次元に気持ち良い"  
-              </p>
-            </div>
-
           </div>
+          <span class="material-symbols-outlined" id="forward-btn">
+            arrow_forward_ios
+          </span>
         </div>
       </section>
 
@@ -104,13 +94,14 @@
           <p>Traditional and modern. Formal and casual.
             We will meet your needs with our reliable techniques and extensive menu.
             We await you in a private space with two seats for your relaxation, where you will be treated to the hospitality that only a barber can provide.</p>
+            <button class="container-buttons">Schedule <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         <img src="images/Style_01.jpg" id="styles-img">
         <div id="styles-desc-container">
           <h2>Fresh Cuts, Fresh Looks</h2>
           <p id="styles-desc">Discover our latest styles and prices — find the perfect look for you. Quality cuts and fresh fades, all at great rates!</p>
-          <button>See More <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="container-buttons">See More <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         
       </div>
