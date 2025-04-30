@@ -38,6 +38,7 @@ section{
     max-width: 1440px;
     margin: 0 auto;
     color: white;
+    text-align: center;
 }
 
 .navbar ul{
@@ -94,6 +95,12 @@ header{
     width: 50px;
     height: 40px;
 }
+
+.sub {
+    font-size: 15px;
+    color: #888;
+    display: block;
+  }
 /*  End of Nav */
 
 /* Start of Ham Menu */
@@ -170,6 +177,10 @@ header{
     text-decoration: none;
     font-size: 20px;
     color: black;
+}
+
+.off-screen-menu ul li:hover {
+    transform: scale(1.05);
 }
 
 .off-screen-menu ul{
@@ -250,13 +261,17 @@ header{
 
 /* Start of Reviews */
 #reviews-wrap{
-    color: white;
     text-align: center;
     background-color: #36454f;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10px;
+    align-items: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .review-img{
@@ -269,25 +284,31 @@ header{
 }
 
 #reviews-gallery{
-    width: 1280px;
+    width: 100%;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 #reviews-gallery div{
     width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0px;
-    padding: 0px;
     flex: none;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+    box-sizing: border-box;
 }
 
 #reviews-gallery span{
-    margin: 10px;
-    font-style: italic;
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    box-sizing: border-box;
 }
 
 #reviews-gallery::-webkit-scrollbar{
@@ -296,8 +317,8 @@ header{
 
 #forward-btn, #back-btn{
     cursor: pointer;
-    margin: 10px;
     text-align: center;
+    margin: 10px;
 }
 /* End of Reviews */
 
@@ -363,6 +384,7 @@ header{
     height: 35px;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 /* End of Styles */
 
@@ -399,6 +421,9 @@ footer{
 .container {
     max-width: 1440px;
     margin: 0 auto;
+}    
+
+.desc-styles-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -408,18 +433,17 @@ footer{
     background-color: white;
     padding: 4rem;
     align-items: center;
-}    
+}
+
+.styles-page-container{
+    
+}
 
 @media (max-width: 1440px) {
 
 }
 
-@media (max-width: 1280px) {
-
-
-}
-
-@media (min-width: 1201px) {
+@media (min-width: 1281px) {
     .off-screen-menu{
         display: none;
     }
@@ -430,8 +454,7 @@ footer{
     }
 }
 
-@media (max-width: 1200px) {
-
+@media (max-width: 1280px) {
     .ham-menu{
         display: block;
     }
@@ -444,13 +467,7 @@ footer{
         margin-right: 10px;
         margin-left: auto;
     }
-}
 
-@media (max-width: 760px){
-    .off-screen-menu{
-        max-width: 760px;
-        right: -770px;
-    }
 }
 
 @media (max-width: 992px) {
@@ -480,6 +497,7 @@ footer{
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+        text-align: center;
     }
 
     #desc-text-container, #styles-desc-container{
@@ -498,3 +516,33 @@ footer{
 
 }
   
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 640px) {
+    #site-name{
+        display: none;
+    }
+}
+
+@media (max-width: 475px) {
+    .off-screen-menu{
+        max-width: 475px;
+        right: -480px;
+    }
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+    #lang-switch-container{
+        margin: 0 auto
+    }
+}
+
+@media (max-width: 320px) {
+
+}

@@ -11,7 +11,7 @@
   <script src="app.js" defer></script>
   <title>barber TATEGAMI</title>
 </head>
-<body>
+<body class="home-page">
 
   <div class="page-content">
     <div class="overlay"></div>
@@ -24,26 +24,26 @@
   
         <div class="on-screen-menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Staff</a></li>
-            <li><a href="#">Price</a></li>
-            <li><a href="#">Schedule</a></li>      
-            <li><a href="#">Access</a></li>     
+            <li><a href="styles.html">Styles<br><span class="sub">スタイル</span></a></li>
+            <li><a href="menu.html">Menu<br><span class="sub">メニュー・料金</span></a></li>
+            <li><a href="team.html">Team<br><span class="sub">スタッフ</span></a></li>
+            <li><a href="booking.html">Booking<br><span class="sub">予約</span></a></li>
+            <li><a href="location.html">Location<br><span class="sub">アクセス</span></a></li>
           </ul>
         </div>
   
         <div id="lang-switch-container">
-          <button class="lang-switch"><img src="images/us_flag.jpg"></button>
-          <button class="lang-switch"><img src="images/jp_flag.png"></button>
+          <button class="lang-switch"><img src="images/us_flag.jpg" id="en-btn"></button>
+          <button class="lang-switch"><img src="images/jp_flag.png" id="jp-btn"></button>
         </div>
   
         <div class="off-screen-menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Staff</a></li>
-            <li><a href="#">Price</a></li>
-            <li><a href="#">Schedule</a></li>      
-            <li><a href="#">Access</a></li>     
+            <li><a href="styles.html">Styles<br><span class="sub">スタイル</span></a></li>
+            <li><a href="menu.html">Menu<br><span class="sub">メニュー・料金</span></a></li>
+            <li><a href="team.html">Team<br><span class="sub">スタッフ</span></a></li>
+            <li><a href="booking.html">Booking<br><span class="sub">予約</span></a></li>
+            <li><a href="location.html">Location<br><span class="sub">アクセス</span></a></li>  
           </ul>
         </div>
   
@@ -62,7 +62,7 @@
             <img id="hero-img" src="images/IMG_03.png" alt="Cozy barbershop with wooden floors and barber chairs">
             <div id="hero-overlay">
               <h1>Welcome to barber TATEGAMI</h1>
-              <button>Book Now</button>
+              <button id="book-btn">Book Now</button>
             </div>
           </div>
       </section>
@@ -79,6 +79,15 @@
             <div>
               <span>"温かい店主、綺麗なお店。また行きたくなる様な所だった。値段も安く出来上がりも満足でした。"</span>
             </div>
+            <div>
+              <span>"Skilled barbers even for my curly black hair all with amazing service. You are putting yourself in safe and capable hands when you visit!"</span>
+            </div>
+            <div>
+              <span>"仕上がりに大変満足 無駄のないサービス マッサージが異次元に気持ち良い"</span>
+            </div>
+            <div>
+              <span>"Definitely one of the best barber shops in Tokyo. Highly recommend if you're looking for a quality and consistent haircut"</span>
+            </div>
           </div>
           <span class="material-symbols-outlined" id="forward-btn">
             arrow_forward_ios
@@ -86,22 +95,20 @@
         </div>
       </section>
 
-      <div class="container">
+      <div class="container desc-styles-container">
 
         <img src="images/IMG_04.png" id="desc-img">
         <div id="desc-text-container">
           <h2>Shimomeguro Barber Mane</h2>
-          <p>Traditional and modern. Formal and casual.
-            We will meet your needs with our reliable techniques and extensive menu.
-            We await you in a private space with two seats for your relaxation, where you will be treated to the hospitality that only a barber can provide.</p>
-            <button class="container-buttons">Schedule <i class="fa-solid fa-arrow-right"></i></button>
+          <p id="desc-text">伝統とモダン。フォーマルにもカジュアルにも。確かな技術と豊富なメニューで、お客様のご要望にお応えします。理容室ならではのおもてなしを、2席だけのプライベート空間でごゆっくりとお楽しみください。</p>
+          <button class="container-buttons" id="menu-btn">Menu <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         <img src="images/Style_01.jpg" id="styles-img">
         <div id="styles-desc-container">
           <h2>Fresh Cuts, Fresh Looks</h2>
-          <p id="styles-desc">Discover our latest styles and prices — find the perfect look for you. Quality cuts and fresh fades, all at great rates!</p>
-          <button class="container-buttons">See More <i class="fa-solid fa-arrow-right"></i></button>
+          <p id="styles-desc">フレッシュなカット、洗練されたスタイル最新のスタイルをご紹介。あなたにぴったりのヘアを見つけてください。フェードからクラシックまで、あなたらしさを引き立てるスタイルをご提案します。</p>
+          <button class="container-buttons" id="see-more-btn">See More <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         
       </div>
