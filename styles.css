@@ -4,6 +4,13 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+    --wrap-color: #36454f;
+    --button-color: rgb(255, 60, 60);
+    --sub-color: #888;
+    --link-color: 
+}
+
 section{
     display: contents;
 }
@@ -418,6 +425,63 @@ footer{
 }
 /* End of Footer */
 
+/* Start of Styles page */
+
+#styles-page-header{
+    text-align: center;
+    margin-top: 50px;
+    font-size: clamp(24px, 5vw, 45px);
+    margin-bottom: 15px;
+}
+
+#styles-page-desc{
+    text-align: center;
+    padding-bottom: 15px;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: clamp(16px, 3vw, 25px);
+    color: 	#595959;
+}
+
+#styles-page-desc-link{
+    color: #0077cc;
+    text-decoration: none;
+}
+
+#styles-page-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+    padding: 20px;
+}
+
+.styles-page-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+#styles-page-subheader{
+    background-color: #36454f;
+    margin: 0px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#styles-page-subheader-link{
+    color: white
+}
+
+/* End of Styles page */
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -436,7 +500,7 @@ footer{
 }
 
 .styles-page-container{
-    
+    min-height: 100dvh;
 }
 
 @media (max-width: 1440px) {
@@ -471,7 +535,7 @@ footer{
 }
 
 @media (max-width: 992px) {
-    .container {
+    .desc-styles-container {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "desc-img"
@@ -515,6 +579,10 @@ footer{
     }
 
 }
+
+@media (max-width: 990px){
+    
+}
   
 @media (max-width: 768px) {
 
@@ -541,8 +609,16 @@ footer{
     #lang-switch-container{
         margin: 0 auto
     }
+
+    #styles-page-grid{
+        margin-bottom: 10px;
+    }
+
 }
 
 @media (max-width: 320px) {
-
+    #styles-page-header{
+        margin-top: 30px;
+        padding: 0px;
+    }
 }
