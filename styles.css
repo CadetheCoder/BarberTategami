@@ -8,11 +8,22 @@ body{
     --wrap-color: #36454f;
     --button-color: rgb(255, 60, 60);
     --sub-color: #888;
-    --link-color: 
+    --link-color: #0077cc;
+    --desc-color: #595959;
 }
 
 section{
     display: contents;
+}
+
+.header{
+    margin-top: 50px;
+    font-size: clamp(24px, 5vw, 45px);
+}
+
+.desc{
+    font-size: clamp(16px, 3vw, 25px);
+    color: 	#595959;
 }
 
 /*  Page Content Blur for Ham Menu  */
@@ -427,15 +438,17 @@ footer{
 
 /* Start of Styles page */
 
-#styles-page-header{
+.styles-page-container{
     text-align: center;
+}
+
+#styles-page-header{
     margin-top: 50px;
     font-size: clamp(24px, 5vw, 45px);
     margin-bottom: 15px;
 }
 
 #styles-page-desc{
-    text-align: center;
     padding-bottom: 15px;
     max-width: 1280px;
     margin: 0 auto;
@@ -481,6 +494,109 @@ footer{
 }
 
 /* End of Styles page */
+
+/* Start of Team Page */
+
+.team-page-container{
+    text-align: center;
+    min-height: 80dvh;
+}
+
+#team-page-header{
+    margin-top: 50px;
+    font-size: clamp(24px, 5vw, 45px);
+}
+
+#team-page-desc{
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: clamp(16px, 3vw, 25px);
+    color: 	#595959;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#team-page-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-card{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 50px;
+}
+
+.team-img{
+    width: 100%;
+}
+
+.team-card p {
+    color: #595959;
+    font-size: clamp(16px, 3.5vw, 20px);
+}
+
+.team-card h2{
+    font-size: clamp(20px, 5vw, 30px);
+}
+
+/* End of Team Page */
+
+/* Start of Location Page */
+
+#location-page-container{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#map-container{
+    position: relative;
+    width: 100%;
+    padding-top: 35%; /* Wide rectangle look */
+    overflow: hidden;
+    border-radius: 12px;
+    max-width: 1280px;
+    box-sizing: border-box;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#location-header{
+    margin-bottom: 0px;
+}
+
+#location-desc{
+    max-width: 1280px;
+}
+
+#map-desc h3{
+    font-size: clamp(20px, 4vw, 28px);
+}
+
+#map-desc p{
+    font-size: clamp(16px, 3.5vw, 20px);
+}
+
+#map-desc{
+    margin-bottom: 20px;
+}
+
+
+/* End of Location Page */
 
 .container {
     max-width: 1440px;
@@ -581,11 +697,17 @@ footer{
 }
 
 @media (max-width: 990px){
-    
+
 }
   
 @media (max-width: 768px) {
+    #team-page-cards-container{
+        flex-wrap: wrap;
+    }
 
+    #location-page-container{
+        min-height: 80dvh;
+    }
 }
 
 @media (max-width: 640px) {
@@ -599,10 +721,21 @@ footer{
         max-width: 475px;
         right: -480px;
     }
+
+
 }
 
 @media (max-width: 425px) {
-
+    .team-card{
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        margin: 5px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -620,5 +753,9 @@ footer{
     #styles-page-header{
         margin-top: 30px;
         padding: 0px;
+    }
+
+    #team-page-header{
+        margin-top: 30px;
     }
 }
