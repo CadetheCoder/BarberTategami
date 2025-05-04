@@ -554,12 +554,14 @@ footer{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #map-container{
     position: relative;
     width: 100%;
-    padding-top: 35%; /* Wide rectangle look */
+    padding-top: 56.25%; /* Wide rectangle look */
     overflow: hidden;
     border-radius: 12px;
     max-width: 1280px;
@@ -589,14 +591,108 @@ footer{
 
 #map-desc p{
     font-size: clamp(16px, 3.5vw, 20px);
+    color: var(--desc-color);
 }
 
 #map-desc{
     margin-bottom: 20px;
 }
 
+#map-desc a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
 
 /* End of Location Page */
+
+/* Start of Menu Page */
+
+.menu-page-container{
+    min-height: 100dvh;
+}
+
+#menu-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 10px;
+}
+
+.course-btn{
+    border: none;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(255, 60, 60);
+    color: white;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);
+}
+
+.course-button-container{
+    margin: 20px;
+    margin-right: 40px;
+}
+
+.course-card-desc-container{
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.course-card-desc-container h2{
+    color: #d4af37;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+#menu-header{
+    text-align: center;
+}
+
+#menu-desc{
+    text-align: center;
+}
+
+.course-card-desc-container p {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.price{
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: bold;
+}
+/* End of Menu Page */
+
+/* Start of Booking Page */
+
+#booking-page-container{
+    min-height: 100dvh;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#booking-page-container a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* End of Booking Page */
 
 .container {
     max-width: 1440px;

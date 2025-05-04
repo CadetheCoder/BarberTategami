@@ -21,7 +21,14 @@ const nameTwo = document.getElementById("name2");
 const nameTwop1 = document.getElementById("name2-p1");
 const nameTwop2 = document.getElementById("name2-p2");
 const nameTwop3 = document.getElementById("name2-p3");
-
+const menuBtn = document.getElementById("menu-btn");
+const bookBtn = document.getElementById("book-btn");
+const seeMoreBtn = document.getElementById("see-more-btn");
+const locationDesc = document.getElementById("location-desc");
+const address = document.getElementById("address");
+const weekdayHours = document.getElementById("weekday-hours");
+const weekendHours = document.getElementById("weekend-hours");
+const closedTime = document.getElementById("closed-time");
 
 // Hamburger Menu
 hamMenu.addEventListener("click", () => {
@@ -37,14 +44,39 @@ if(document.body.classList.contains("home-page")){
     forwardBtn.addEventListener("click", () => {
         reviewsGallery.style.scrollBehavior = "smooth";
         reviewsGallery.scrollLeft += reviewsGallery.clientWidth;
-    })
+    });
 
     // Back Btn
     backBtn.addEventListener("click", () => {
         reviewsGallery.style.scrollBehavior = "smooth";
         reviewsGallery.scrollLeft -= reviewsGallery.clientWidth;
+    });
+
+    // Menu Btn
+    menuBtn.addEventListener("click", () => {
+        window.location.href = "menu.html";
+    });
+
+    // Book Btn
+    bookBtn.addEventListener("click", () => {
+        window.location.href = "booking.html";
+    });
+
+    // See More Btn
+    seeMoreBtn.addEventListener("click", () => {
+        window.location.href = "styles.html";
+    });
+
+}
+
+// Menu Page
+if(document.body.classList.contains("menu-page")){
+    const courseBtns = document.querySelectorAll(".course-btn");
+    courseBtns.forEach(button => {
+        button.addEventListener("click", () => {
+            window.location.href = "booking.html";
+        })
     })
-    
 }
 
 const translation = {
@@ -72,6 +104,13 @@ const translation = {
         nameTwop1: "From Kiryu City, Gunma Prefecture",
         nameTwop2: "Trained in Urawa and Kachidoki.",
         nameTwop3: "Joined barber TATEGAMI in January 2016.",
+
+        // Location Page 
+        locationDesc: "Located in the heart of Shimomeguro — just a short walk from the station. Come relax, refresh, and leave looking your best.",
+        address: "1st Floor, Tanaka Building, 2-4-15 Shimomeguro, Meguro-ku, Tokyo 153-0064, Japan",
+        weekdayHours: "Weekdays: 10:00 AM – 8:00 PM",
+        weekendHours: "Weekends: 9:00 AM – 7:00 PM",
+        closedTime: "Closed: Every Monday",
     },
 
     jp: {
@@ -98,7 +137,14 @@ const translation = {
         nameTwop1: "群馬県桐生市出身",
         nameTwop2: "浦和・勝どきにて修業。",
         nameTwop3: "平成28年1月より barber TATEGAMI 入店。",
-    }
+        
+        // Location Page
+        locationDesc: "下目黒の中心、駅から徒歩すぐの便利な立地。リラックスしてリフレッシュ、最高のスタイルでお帰りいただけます。",
+        address: "〒153-0064 東京都目黒区下目黒二丁目4番15号 田中ビル 1階",
+        weekdayHours: "平日：10:00〜20:00",
+        weekendHours: "土日：9:00〜19:00",
+        closedTime: "定休日：毎週月曜日",
+    },
 
 };
 
@@ -112,15 +158,18 @@ enBtn.addEventListener("click", () => {
 
     // Styles Page
     if(document.body.classList.contains("styles-page")){
-        stylesPageSubheader.innerHTML = `
-        ${translation.en.stylesPageSubheaderBeforeLink}
-        <a href="menu.html" id="styles-page-subheader-link">${translation.en.stylesPageSubheaderLinkText}</a>
-        ${translation.en.stylesPageSubheaderAfterLink}`;
-
         stylesPageDesc.innerHTML = `
         ${translation.en.stylesPageDescBeforeLink}
         <a id="styles-page-desc-link" href="https://www.instagram.com/barber_tategami" target="_blank">${translation.en.stylesPageDescLinkText}</a>`
     }
+
+    // Subheader linking to Menu
+    if(document.body.classList.contains("subheader")){
+        stylesPageSubheader.innerHTML = `
+        ${translation.en.stylesPageSubheaderBeforeLink}
+        <a href="menu.html" id="styles-page-subheader-link">${translation.en.stylesPageSubheaderLinkText}</a>
+        ${translation.en.stylesPageSubheaderAfterLink}`;
+    };
     
     // Team Page
     if(document.body.classList.contains("team-page")){
@@ -133,6 +182,15 @@ enBtn.addEventListener("click", () => {
         nameTwop1.innerText = translation.en.nameTwop1;
         nameTwop2.innerText = translation.en.nameTwop2;
         nameTwop3.innerText = translation.en.nameTwop3;
+    }
+
+    // Location Page
+    if(document.body.classList.contains("location-page")){
+        locationDesc.innerText = translation.en.locationDesc;
+        address.innerText = translation.en.address;
+        weekdayHours.innerText = translation.en.weekdayHours;
+        weekendHours.innerText = translation.en.weekendHours;
+        closedTime.innerText = translation.en.closedTime;
     }
 
 });
@@ -158,6 +216,14 @@ jpBtn.addEventListener("click", () => {
         ${translation.jp.stylesPageDescAfterLink}`
     }
 
+    // Styles Page Subheader for other pages
+    if(document.body.classList.contains("subheader")){
+        stylesPageSubheader.innerHTML = `
+        ${translation.jp.stylesPageSubheaderBeforeLink}
+        <a href="menu.html" id="styles-page-subheader-link">${translation.jp.stylesPageSubheaderLinkText}</a>
+        ${translation.jp.stylesPageSubheaderAfterLink}`;
+    };
+
     // Team Page
     if(document.body.classList.contains("team-page")){
         teamPageDesc.innerText = translation.jp.teamPageDesc;
@@ -169,6 +235,15 @@ jpBtn.addEventListener("click", () => {
         nameTwop1.innerText = translation.jp.nameTwop1;
         nameTwop2.innerText = translation.jp.nameTwop2;
         nameTwop3.innerText = translation.jp.nameTwop3;
+    }
+
+    // Location Page
+    if(document.body.classList.contains("location-page")){
+        locationDesc.innerText = translation.jp.locationDesc;
+        address.innerText = translation.jp.address;
+        weekdayHours.innerText = translation.jp.weekdayHours;
+        weekendHours.innerText = translation.jp.weekendHours;
+        closedTime.innerText = translation.jp.closedTime;
     }
 
 });
