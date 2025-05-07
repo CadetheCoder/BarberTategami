@@ -601,15 +601,15 @@ footer{
 #map-desc a {
     color: var(--link-color);
     text-decoration: none;
-    font-weight: bold;
 }
 
 /* End of Location Page */
 
 /* Start of Menu Page */
 
-.menu-page-container{
+#menu-page-container{
     min-height: 100dvh;
+    margin: 20px;
 }
 
 #menu-card-container{
@@ -617,6 +617,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .course-card{
@@ -642,6 +643,7 @@ footer{
     background-color: rgb(255, 60, 60);
     color: white;
     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 .course-button-container{
@@ -652,12 +654,12 @@ footer{
 .course-card-desc-container{
     margin: 20px;
     margin-left: 40px;
+    max-width: 1100px;
 }
 
 .course-card-desc-container h2{
     color: #d4af37;
-    border-bottom: 1px solid;
-    padding-bottom: 5px;
+    font-size: clamp(20px, 4vw, 28px);
 }
 
 #menu-header{
@@ -670,6 +672,10 @@ footer{
 
 .course-card-desc-container p {
     font-size: clamp(14px, 2vw, 20px);
+}
+
+.course-desc{
+    color: var(--desc-color)
 }
 
 .price{
@@ -804,11 +810,38 @@ footer{
     #location-page-container{
         min-height: 80dvh;
     }
+    
 }
 
 @media (max-width: 640px) {
     #site-name{
         display: none;
+    }
+
+    #menu-card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .course-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        text-align: center;
+    }
+    
+    .course-button-container{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .course-card-desc-container{
+        margin: 20px;
+        margin-bottom: 10px;
     }
 }
 
@@ -847,11 +880,10 @@ footer{
 
 @media (max-width: 320px) {
     #styles-page-header{
-        margin-top: 30px;
         padding: 0px;
     }
 
-    #team-page-header{
+    .header{
         margin-top: 30px;
     }
 }

@@ -61,18 +61,20 @@
   
     <main>
 
-        <div class="container menu-page-container">
+        <div class="container">
+
+          <div id="menu-page-container">
 
             <h1 id="menu-header" class="header">Our Menu</h1>
             <p id="menu-desc" class="desc">Explore our range of haircuts, shaves, and grooming services. Student discounts available with valid ID.</p>
 
             <div id="menu-card-container">
 
-                <div class="course-card">
+                <div class="course-card" id="course-btn1">
                     <div class="course-card-desc-container">
                         <h2>Basic Cut Course</h2>
-                        <span class="price">5,000 yen</span>
-                        <p>Cut + Shampoo + Quick Massage + Shaving</p>
+                        <p class="price">¥5,000</p>
+                        <p class="course-desc">Cut + Shampoo + Quick Massage + Shaving</p>
                     </div>
                     <div class="course-button-container">
                         <button class="course-btn">Book Now</button>
@@ -81,9 +83,174 @@
 
                 <div class="course-card">
                   <div class="course-card-desc-container">
-                      <h2>Basic Cut Course</h2>
-                      <p><span class="price">4,510 yen</span> (High School Students)</p>
-                      <p>Cut + Shampoo + Quick Massage + Shaving</p>
+                      <h2>Basic Cut Course (High School Students)</h2>
+                      <p class="price">¥4,510 (10% OFF)</p>
+                      <p class="course-desc">Cut + Shampoo + Quick Massage + Shaving</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+                
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Basic Cut Course (Junior High Students)</h2>
+                      <p class="price">¥4,070 (20% OFF)</p>
+                      <p class="course-desc">Cut + Shampoo + Quick Massage + Shaving</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Basic Cut Course (Elementary Students)</h2>
+                      <p class="price">¥3,850 (25% OFF)</p>
+                      <p class="course-desc">Cut + Shampoo + Quick Massage + Shaving</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Head Course</h2>
+                      <p class="price">¥6,100</p>
+                      <p class="course-desc">Basic + scalp cleansing + massage shampoo + scalp treatment</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Face Course</h2>
+                      <p class="price">¥6,870</p>
+                      <p class="course-desc">Basic + face cleansing + steam shaving + face massage + pack</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Cut Only</h2>
+                      <p class="price">¥3,410</p>
+                      <p class="course-desc">A quick and clean haircut—nothing more, nothing less. Perfect for those who want to refresh their look without the extras.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Cut Only (Students)</h2>
+                      <p class="price">¥3,300 (¥110 Off)</p>
+                      <p class="course-desc">A quick and clean haircut—nothing more, nothing less. Perfect for those who want to refresh their look without the extras.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Color Course (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥3,500</p>
+                      <p class="course-desc">Transform your look with expert color application tailored to your style. Whether it's a bold new hue or a subtle touch-up, we’ll blend your color with precision to achieve a sharp, fresh look that complements your cut.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Gray Blending Course (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥2,200</p>
+                      <p class="course-desc">Achieve a natural, subtle blend that softens the appearance of gray hair. This service gently blends gray strands with your natural color, creating a youthful and refreshed look without the harsh lines of full coverage. Perfect for clients who want a smooth, natural transition while maintaining a sharp, professional appearance.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Hair Manicure Service (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥4,400</p>
+                      <p class="course-desc">Enhance your hair with a vibrant, glossy finish using a gentle, semi-permanent color treatment. This service coats the hair with rich color, adding shine and depth without the commitment of traditional dyes. Perfect for clients looking to refresh their look with a subtle touch of color or add a glossy shine to their natural shade.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Bleach & Lightening Service (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥4,400</p>
+                      <p class="course-desc">Achieve the perfect blonde or lightened look with our professional bleach service. Whether you’re going for a full platinum transformation or subtle highlights, we carefully lighten your hair to the desired shade while maintaining its strength and health. Ideal for clients looking for a dramatic change or a clean, bright base for further color treatments.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Perm Styling (Rod or Iron) (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥4,500</p>
+                      <p class="course-desc">Add texture, volume, or wave to your style with our customizable perm service. Whether you’re after natural curls with rods or a more defined shape using irons, we tailor the technique to suit your hair length and condition. A flexible option for enhancing your overall look with lasting results.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Special Perm Styling (Twist, Spiral, etc) (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥6,500</p>
+                      <p class="course-desc">Take your style to the next level with our special perm techniques. From tight twists to flowing spirals, these advanced styles add bold texture and personality to your hair. Ideal for clients looking for a standout, long-lasting look that goes beyond the basics.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Hair Straightening (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥10,000</p>
+                      <p class="course-desc">Smooth, sleek, and long-lasting—our hair straightening service tames frizz and transforms waves or curls into a polished, straight finish. Perfect for clients seeking a clean, manageable look with a refined edge.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Point Perms (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥2,500</p>
+                      <p class="course-desc">Add volume or texture exactly where you need it with our point perm service. Whether it’s lifting the roots, shaping the bangs, or adding movement to specific areas, this targeted treatment enhances your hairstyle without a full perm.</p>
+                  </div>
+                  <div class="course-button-container">
+                      <button class="course-btn">Book Now</button>
+                  </div>
+                </div>
+
+                <div class="course-card">
+                  <div class="course-card-desc-container">
+                      <h2>Ladies Shave (prices vary depending on hair length and volume)</h2>
+                      <p class="price">+¥3,630</p>
+                      <p class="course-desc">A gentle, professional shave that leaves your skin smooth, refreshed, and glowing. This service includes careful facial shaving to remove fine hair and dull skin, enhancing makeup application and overall skin clarity.</p>
                   </div>
                   <div class="course-button-container">
                       <button class="course-btn">Book Now</button>
@@ -91,6 +258,8 @@
                 </div>
 
             </div>
+
+          </div>
 
         </div>
 
