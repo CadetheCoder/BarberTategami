@@ -8,8 +8,8 @@ const enBtn = document.getElementById("en-btn");
 const jpBtn = document.getElementById("jp-btn");
 const descText = document.getElementById("desc-text");
 const stylesDesc = document.getElementById("styles-desc");
-const stylesPageSubheader = document.getElementById("styles-page-subheader");
-const stylesPageSubheaderLink = document.getElementById("styles-page-subheader-link");
+const subheader = document.querySelector(".subheader")
+const subheaderLink = document.querySelector(".subheader-link");
 const stylesPageDesc = document.getElementById("styles-page-desc");
 const stylesPageDescLink = document.getElementById("styles-page-desc-link");
 const teamPageDesc = document.getElementById("team-page-desc");
@@ -29,6 +29,27 @@ const address = document.getElementById("address");
 const weekdayHours = document.getElementById("weekday-hours");
 const weekendHours = document.getElementById("weekend-hours");
 const closedTime = document.getElementById("closed-time");
+const menuDesc = document.getElementById("menu-desc");
+const menuPageSubheader = document.getElementById("menu-page-subheader");
+const menuPageSubheaderLink = document.getElementById("menu-page-subheader-link");
+const bookingDesc = document.getElementById("booking-desc");
+const basicCutHeader = document.getElementById("basic-cut-header");
+const basicCutDesc = document.getElementById("basic-cut-desc");
+const basicCutHeaderHs = document.getElementById("basic-cut-header-hs");
+const basicCutPriceHs = document.getElementById("basic-cut-price-hs");
+const basicCutDescHs = document.getElementById("basic-cut-desc-hs");
+const basicCutHeaderJhs = document.getElementById("basic-cut-header-jhs");
+const basicCutPriceJhs = document.getElementById("basic-cut-price-jhs");
+const basicCutDescJhs = document.getElementById("basic-cut-desc-jhs");
+const basicCutHeaderEs = document.getElementById("basic-cut-header-es");
+const basicCutPriceEs = document.getElementById("basic-cut-price-es");
+const basicCutDescEs = document.getElementById("basic-cut-desc-es");
+
+const bookingNum = document.getElementById("booking-num");
+
+const selectedCourse = document.getElementById("selected-course");
+const selectedPrice = document.getElementById("selected-price");
+const selectedDesc = document.getElementById("selected-desc");
 
 // Hamburger Menu
 hamMenu.addEventListener("click", () => {
@@ -67,18 +88,6 @@ if(document.body.classList.contains("home-page")){
         window.location.href = "styles.html";
     });
 
-}
-
-// Menu Page
-if(document.body.classList.contains("menu-page")){
-    const courseBtns = document.querySelectorAll(".course-btn");
-    courseBtns.forEach(button => {
-        button.addEventListener("click", () => {
-            window.location.href = "booking.html";
-        })
-    })
-}
-
 const translation = {
      
     en: {
@@ -86,11 +95,13 @@ const translation = {
         // Home page
         descText: `Traditional and modern. Formal and casual. We will meet your needs with our reliable techniques and extensive menu. We await you in a private space with two seats for your relaxation, where you will be treated to the hospitality that only a barber can provide.`,
         stylesDesc: `Discover our latest styles — find the perfect look for you. Quality cuts, sharp fades, and timeless styles tailored to you.`,
+        
+        // Subheader
+        subheaderBeforeLink: "Looking for a cut? Visit our ",
+        subheaderLinkText: "menu page",
+        subheaderAfterLink: "to see a full list of services and prices, including student discounts with valid ID. We've got options for everyone.",
 
         // Styles Page 
-        stylesPageSubheaderBeforeLink: "Looking for a cut? Visit our ",
-        stylesPageSubheaderLinkText: "menu page",
-        stylesPageSubheaderAfterLink: "to see a full list of services and prices, including student discounts with valid ID. We’ve got options for everyone.",
         stylesPageDescBeforeLink: "Check out more styles on our ",
         stylesPageDescLinkText: "Instagram",
 
@@ -108,9 +119,31 @@ const translation = {
         // Location Page 
         locationDesc: "Located in the heart of Shimomeguro — just a short walk from the station. Come relax, refresh, and leave looking your best.",
         address: "1st Floor, Tanaka Building, 2-4-15 Shimomeguro, Meguro-ku, Tokyo 153-0064, Japan",
-        weekdayHours: "Weekdays: 10:00 AM – 8:00 PM",
-        weekendHours: "Weekends: 9:00 AM – 7:00 PM",
+        weekdayHours: "Weekdays: 10:00 AM - 8:00 PM",
+        weekendHours: "Weekends: 9:00 AM - 7:00 PM",
         closedTime: "Closed: Every Monday",
+
+        // Menu Page
+        menuDesc: "Explore our range of haircuts, shaves, and grooming services. Student discounts available with valid ID.",
+        menuPageSubheaderBeforeLink: "See our latest styles and shop updates on ",
+        menuPageSubheaderLink: "Instagram",
+        menuPageSubheaderAfterLink: " — Follow us!",
+        basicCutHeader: "Basic Cut Course",
+        basicCutPrice: "¥5,000",
+        basicCutDesc: "Cut + Shampoo + Quick Massage + Shaving",
+        basicCutHeaderHs: "Basic Cut Course (High School Students)",
+        basicCutPriceHs: "¥4,510 (10% OFF)",
+        basicCutDescHs: "Cut + Shampoo + Quick Massage + Shaving",
+        basicCutHeaderJhs: "Basic Cut Course (Junior High Students)",
+        basicCutPriceJhs: "¥4,070 (20% OFF)",
+        basicCutDescJhs: "Cut + Shampoo + Quick Massage + Shaving",
+        basicCutHeaderEs: "Basic Cut Course (Elementary Students)",
+        basicCutPriceEs: "¥3,850 (25% OFF)",
+        basicCutDescEs: "Cut + Shampoo + Quick Massage + Shaving",
+
+        // Booking Page
+        bookingDesc: "Give us a call to reserve your spot. We're happy to help you find the perfect time. Call us at",
+        bookingNum: "03-1234-5678",
     },
 
     jp: {
@@ -119,10 +152,12 @@ const translation = {
         descText: `伝統とモダン。フォーマルにもカジュアルにも。確かな技術と豊富なメニューで、お客様のご要望にお応えします。理容室ならではのおもてなしを、2席だけのプライベート空間でごゆっくりとお楽しみください。`,
         stylesDesc: `フレッシュなカット、洗練されたスタイル 最新のスタイルをご紹介。あなたにぴったりのヘアを見つけてください。フェードからクラシックまで、あなたらしさを引き立てるスタイルをご提案します。`,
 
+        // Subheader
+        subheaderBeforeLink: "カットをお考えの方は、",
+        subheaderLinkText: "メニュー",
+        subheaderAfterLink: "をチェック！学生証のご提示で学割もご利用いただけます。あなたに合ったスタイル、きっと見つかります。",
+
         // Styles Page 
-        stylesPageSubheaderBeforeLink: "カットをお考えの方は、",
-        stylesPageSubheaderLinkText: "メニュー",
-        stylesPageSubheaderAfterLink: "をチェック！学生証のご提示で学割もご利用いただけます。あなたに合ったスタイル、きっと見つかります。",
         stylesPageDescBeforeLink: "もっとスタイルをチェックするには、私たちの ",
         stylesPageDescLinkText: "Instagram",
         stylesPageDescAfterLink: "をご覧ください。",
@@ -141,12 +176,54 @@ const translation = {
         // Location Page
         locationDesc: "下目黒の中心、駅から徒歩すぐの便利な立地。リラックスしてリフレッシュ、最高のスタイルでお帰りいただけます。",
         address: "〒153-0064 東京都目黒区下目黒二丁目4番15号 田中ビル 1階",
-        weekdayHours: "平日：10:00〜20:00",
-        weekendHours: "土日：9:00〜19:00",
+        weekdayHours: "平日: 10:00〜20:00",
+        weekendHours: "土日: 9:00〜19:00",
         closedTime: "定休日：毎週月曜日",
+
+        // Menu Page 
+        menuDesc: "カットやシェービングなど多彩なメニューをご用意。学生証提示で割引あり。",
+        menuPageSubheaderBeforeLink: "最新のスタイルやショップ情報は",
+        menuPageSubheaderLink: "Instagram",
+        menuPageSubheaderAfterLink: "でチェック — フォローもお忘れなく!",
+        basicCutHeader: "ベーシックカットコース",
+        basicCutPrice: "¥5,000",
+        basicCutDesc: "カット＋シャンプー＋クイックマッサージ＋シェービング",
+        basicCutHeaderHs: "ベーシックカットコース（高校生）",
+        basicCutPriceHs: "¥4,510 (10%オフ）",
+        basicCutDescHs: "カット＋シャンプー＋クイックマッサージ＋シェービング",
+        basicCutHeaderJhs: "ベーシックカットコース（中学生）",
+        basicCutPriceJhs: "¥4,070(20%オフ）",
+        basicCutDescJhs: "カット＋シャンプー＋クイックマッサージ＋シェービング",
+        basicCutHeaderEs: "ベーシックカットコース（小学生）",
+        basicCutPriceEs: "¥3,850(25%オフ)",
+        basicCutDescEs: "カット＋シャンプー＋クイックマッサージ＋シェービング",
+
+        // Booking Page
+        bookingDesc: "ご予約はお電話でどうぞ。ご希望の時間をご案内いたします。お電話はこちら：",
+        bookingNum: "03-1234-5678",
     },
 
 };
+
+// Menu Page Btns
+if(document.body.classList.contains("menu-page")){
+    const basicCut = document.getElementById("basic-cut");
+    basicCut.addEventListener("click", () => {
+        window.location.href = "booking.html?course=basiccut";
+    });
+}
+
+// Booking Page
+if(document.body.classList.contains("booking-page")){
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get("course")
+
+    if(query === "basiccut"){
+        selectedCourse.innerText = `${translation.jp.basicCutHeader}`;
+        selectedPrice.innerText =  `${translation.jp.basicCutPrice}`;
+        selectedDesc.innerText = `${translation.jp.basicCutDesc}`;
+    }
+}
 
 enBtn.addEventListener("click", () => {
 
@@ -163,12 +240,12 @@ enBtn.addEventListener("click", () => {
         <a id="styles-page-desc-link" href="https://www.instagram.com/barber_tategami" target="_blank">${translation.en.stylesPageDescLinkText}</a>`
     }
 
-    // Subheader linking to Menu
-    if(document.body.classList.contains("subheader")){
-        stylesPageSubheader.innerHTML = `
-        ${translation.en.stylesPageSubheaderBeforeLink}
-        <a href="menu.html" id="styles-page-subheader-link">${translation.en.stylesPageSubheaderLinkText}</a>
-        ${translation.en.stylesPageSubheaderAfterLink}`;
+    // Subheader 
+    if(document.body.classList.contains("subheader-page")){
+        subheader.innerHTML = `
+        ${translation.en.subheaderBeforeLink}
+        <a href="menu.html" id="styles-page-subheader-link">${translation.en.subheaderLinkText}</a>
+        ${translation.en.subheaderAfterLink}`;
     };
     
     // Team Page
@@ -193,6 +270,28 @@ enBtn.addEventListener("click", () => {
         closedTime.innerText = translation.en.closedTime;
     }
 
+    // Menu Page 
+    if(document.body.classList.contains("menu-page")){
+        menuDesc.innerText = translation.en.menuDesc;
+        menuPageSubheader.innerHTML = `${translation.en.menuPageSubheaderBeforeLink}<a id="menu-page-subheader-link" href="https://www.instagram.com/barber_tategami" target="_blank">${translation.en.menuPageSubheaderLink}</a>${translation.en.menuPageSubheaderAfterLink}`;
+        basicCutHeader.innerText = translation.en.basicCutHeader;
+        basicCutDesc.innerText = translation.en.basicCutDesc;
+        basicCutHeaderHs.innerText = translation.en.basicCutHeaderHs;
+        basicCutPriceHs.innerText = translation.en.basicCutPriceHs;
+        basicCutDescHs.innerText = translation.en.basicCutDescHs;
+        basicCutHeaderJhs.innerText = translation.en.basicCutHeaderJhs;
+        basicCutPriceJhs.innerText = translation.en.basicCutPriceJhs;
+        basicCutDescJhs.innerText = translation.en.basicCutDescJhs;
+        basicCutHeaderEs.innerText = translation.en.basicCutHeaderEs;
+        basicCutPriceEs.innerText = translation.en.basicCutPriceEs;
+        basicCutDescEs.innerText = translation.en.basicCutDescEs;
+    }
+
+    // Booking Page
+    if(document.body.classList.contains("booking-page")){
+        bookingDesc.innerHTML = `${translation.en.bookingDesc}<a href="tel:0312345678" id="booking-num"> ${translation.en.bookingNum}</a>`;
+    }
+
 });
 
 jpBtn.addEventListener("click", () => {
@@ -205,23 +304,16 @@ jpBtn.addEventListener("click", () => {
     
     // Styles Page
     if(document.body.classList.contains("styles-page")){
-        stylesPageSubheader.innerHTML = `
-        ${translation.jp.stylesPageSubheaderBeforeLink}
-        <a href="menu.html" id="styles-page-subheader-link">${translation.jp.stylesPageSubheaderLinkText}</a>
-        ${translation.jp.stylesPageSubheaderAfterLink}`;
-
         stylesPageDesc.innerHTML = `
         ${translation.jp.stylesPageDescBeforeLink}
         <a id="styles-page-desc-link" href="https://www.instagram.com/barber_tategami" target="_blank">${translation.jp.stylesPageDescLinkText}</a>
-        ${translation.jp.stylesPageDescAfterLink}`
+        ${translation.jp.stylesPageDescAfterLink}`;
     }
 
-    // Styles Page Subheader for other pages
-    if(document.body.classList.contains("subheader")){
-        stylesPageSubheader.innerHTML = `
-        ${translation.jp.stylesPageSubheaderBeforeLink}
-        <a href="menu.html" id="styles-page-subheader-link">${translation.jp.stylesPageSubheaderLinkText}</a>
-        ${translation.jp.stylesPageSubheaderAfterLink}`;
+    // Subheader
+    if(document.body.classList.contains("subheader-page")){
+        subheader.innerHTML = `
+        ${translation.jp.subheaderBeforeLink}<a href="menu.html" id="styles-page-subheader-link">${translation.jp.subheaderLinkText}</a>${translation.jp.subheaderAfterLink}`;
     };
 
     // Team Page
@@ -244,6 +336,29 @@ jpBtn.addEventListener("click", () => {
         weekdayHours.innerText = translation.jp.weekdayHours;
         weekendHours.innerText = translation.jp.weekendHours;
         closedTime.innerText = translation.jp.closedTime;
+    }
+
+    // Menu Page 
+    if(document.body.classList.contains("menu-page")){
+        menuDesc.innerText = translation.jp.menuDesc;
+        menuPageSubheader.innerHTML = `
+        ${translation.jp.menuPageSubheaderBeforeLink}<a id="menu-page-subheader-link" href="https://www.instagram.com/barber_tategami" target="_blank">${translation.jp.menuPageSubheaderLink}</a>${translation.jp.menuPageSubheaderAfterLink}`;
+        basicCutHeader.innerText = translation.jp.basicCutHeader;
+        basicCutDesc.innerText = translation.jp.basicCutDesc;
+        basicCutHeaderHs.innerText = translation.jp.basicCutHeaderHs;
+        basicCutPriceHs.innerText = translation.jp.basicCutPriceHs;
+        basicCutDescHs.innerText = translation.jp.basicCutDescHs;
+        basicCutHeaderJhs.innerText = translation.jp.basicCutHeaderJhs;
+        basicCutPriceJhs.innerText = translation.jp.basicCutPriceJhs;
+        basicCutDescJhs.innerText = translation.jp.basicCutDescJhs;
+        basicCutHeaderEs.innerText = translation.jp.basicCutHeaderEs;
+        basicCutPriceEs.innerText = translation.jp.basicCutPriceEs;
+        basicCutDescEs.innerText = translation.jp.basicCutDescEs;
+    }
+
+    // Booking Page
+    if(document.body.classList.contains("booking-page")){
+        bookingDesc.innerHTML = `${translation.jp.bookingDesc}<a href="tel:0312345678" id="booking-num">${translation.jp.bookingNum}</a>`;
     }
 
 });

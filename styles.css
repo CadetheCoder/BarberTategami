@@ -10,6 +10,7 @@ body{
     --sub-color: #888;
     --link-color: #0077cc;
     --desc-color: #595959;
+    --gold-color: #d4af37;
 }
 
 section{
@@ -227,6 +228,23 @@ header{
     margin-left: auto;
 }
 
+/* Start of Subheader */
+
+.subheader{
+    background-color: #36454f;
+    margin: 0px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subheader-link{
+    color: white
+}
+
+/* End of Subheader */
+
 /* Hero */
 #hero-img-container{
     display: block;
@@ -274,6 +292,18 @@ header{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.desc-styles-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas: 
+    "desc-img desc-text-container"
+    "styles-desc-container styles-img";
+    background-color: white;
+    padding: 4rem;
+    align-items: center;
 }
 /* End of Hero */
 
@@ -493,6 +523,10 @@ footer{
     color: white
 }
 
+.styles-page-container{
+    min-height: 100dvh;
+}
+
 /* End of Styles page */
 
 /* Start of Team Page */
@@ -682,6 +716,19 @@ footer{
     font-size: clamp(14px, 2vw, 20px);
     font-weight: bold;
 }
+
+#menu-page-subheader{
+    background-color: #36454f;
+    margin: 0px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#menu-page-subheader-link{
+    color: white;
+}
 /* End of Menu Page */
 
 /* Start of Booking Page */
@@ -698,28 +745,38 @@ footer{
     text-decoration: none;
 }
 
+#selection-header{
+    font-size: clamp(20px, 4vw, 28px);
+}
+
+#selected-course{
+    color: var(--gold-color);
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+#selected-price{
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+#selected-desc{
+    color: var(--desc-color);
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+#selected-course-container{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 12px;
+}
+
 /* End of Booking Page */
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
 }    
-
-.desc-styles-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    grid-template-areas: 
-    "desc-img desc-text-container"
-    "styles-desc-container styles-img";
-    background-color: white;
-    padding: 4rem;
-    align-items: center;
-}
-
-.styles-page-container{
-    min-height: 100dvh;
-}
 
 @media (max-width: 1440px) {
 
