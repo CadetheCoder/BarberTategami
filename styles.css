@@ -132,7 +132,7 @@ header{
     position: relative;
     display: none;
     z-index: 200;
-    margin-right: 10px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -669,6 +669,8 @@ footer{
     color: white;
     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);
     cursor: pointer;
+    width: 150px;
+    font-size: clamp(10px, 3vw, 14px);
 }
 
 .course-button-container{
@@ -719,6 +721,11 @@ footer{
 
 #menu-page-subheader-link{
     color: white;
+}
+
+.course-btn-sub{
+    font-size: var(--desc-color);
+    font-size: 12px;
 }
 /* End of Menu Page */
 
@@ -908,6 +915,7 @@ footer{
     #styles-page-grid{
         margin-bottom: 10px;
     }
+
 
 }
 
