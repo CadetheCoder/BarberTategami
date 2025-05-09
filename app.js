@@ -44,7 +44,33 @@ const basicCutDescJhs = document.getElementById("basic-cut-desc-jhs");
 const basicCutHeaderEs = document.getElementById("basic-cut-header-es");
 const basicCutPriceEs = document.getElementById("basic-cut-price-es");
 const basicCutDescEs = document.getElementById("basic-cut-desc-es");
-
+const headCourseHeader = document.getElementById("head-course-header");
+const headCourseDesc = document.getElementById("head-course-desc");
+const faceCourseHeader = document.getElementById("face-course-header");
+const faceCourseDesc = document.getElementById("face-course-desc");
+const cutOnlyHeader = document.getElementById("cut-only-header");
+const cutOnlyDesc = document.getElementById("cut-only-desc");
+const cutOnlyHeaderStu = document.getElementById("cut-only-header-stu");
+const cutOnlyPriceStu = document.getElementById("cut-only-price-stu");
+const cutOnlyDescStu = document.getElementById("cut-only-desc-stu");
+const hairColoringHeader = document.getElementById("hair-coloring-header");
+const hairColoringDesc =  document.getElementById("hair-coloring-desc");
+const grayBlendingHeader = document.getElementById("gray-blending-header");
+const grayBlendingDesc = document.getElementById("gray-blending-desc");
+const hairManicureHeader = document.getElementById("hair-manicure-header");
+const hairManicureDesc = document.getElementById("hair-manicure-desc");
+const bleachHeader = document.getElementById("bleach-header");
+const bleachDesc = document.getElementById("bleach-desc");
+const permHeader = document.getElementById("perm-header");
+const permDesc = document.getElementById("perm-desc");
+const specialPermHeader = document.getElementById("special-perm-header");
+const specialPermDesc = document.getElementById("special-perm-desc");
+const hairStraighteningHeader = document.getElementById("hair-straightening-header");
+const hairStraighteningDesc = document.getElementById("hair-straightening-desc");
+const pointPermHeader = document.getElementById("point-perm-header");
+const pointPermDesc = document.getElementById("point-perm-desc");
+const ladiesShaveHeader = document.getElementById("ladies-shave-header");
+const ladiesShaveDesc = document.getElementById("ladies-shave-desc");
 const bookingNum = document.getElementById("booking-num");
 
 const selectedCourse = document.getElementById("selected-course");
@@ -87,6 +113,7 @@ if(document.body.classList.contains("home-page")){
     seeMoreBtn.addEventListener("click", () => {
         window.location.href = "styles.html";
     });
+}
 
 const translation = {
      
@@ -140,10 +167,51 @@ const translation = {
         basicCutHeaderEs: "Basic Cut Course (Elementary Students)",
         basicCutPriceEs: "¥3,850 (25% OFF)",
         basicCutDescEs: "Cut + Shampoo + Quick Massage + Shaving",
+        headCourseHeader: "Head Course",
+        headCoursePrice: "¥6,100",
+        headCourseDesc: "Basic + scalp cleansing + massage shampoo + scalp treatment",
+        faceCourseHeader: "Face Course",
+        faceCoursePrice: "¥6,870",
+        faceCourseDesc: "Basic + face cleansing + steam shaving + face massage + pack",
+        cutOnlyHeader: "Cut Only",
+        cutOnlyPrice: "¥3,410",
+        cutOnlyDesc: "A quick and clean haircut—nothing more, nothing less. Perfect for those who want to refresh their look without the extras.",
+        cutOnlyHeaderStu: "Cut Only (Students)",
+        cutOnlyPriceStu: "¥3,300 (¥110 Off)",
+        cutOnlyDescStu: "A quick and clean haircut—nothing more, nothing less. Perfect for those who want to refresh their look without the extras.",
+        hairColoringHeader: "Hair Coloring (prices vary depending on hair length and volume)",
+        hairColoringPrice: "+¥3,500",
+        hairColoringDesc: "Transform your look with expert color application tailored to your style. Whether it's a bold new hue or a subtle touch-up, we'll blend your color with precision to achieve a sharp, fresh look that complements your cut.",
+        grayBlendingHeader: "Gray Blending (prices vary depending on hair length and volume)",
+        grayBlendingPrice: "+¥2,200",
+        grayBlendingDesc: "Achieve a natural, subtle blend that softens the appearance of gray hair. This service gently blends gray strands with your natural color, creating a youthful and refreshed look without the harsh lines of full coverage.",
+        hairManicureHeader: "Hair Manicure (prices vary depending on hair length and volume)",
+        hairManucurePrice: "+¥4,400",
+        hairManicureDesc: "Enhance your hair with a vibrant, glossy finish using a gentle, semi-permanent color treatment. This service coats the hair with rich color, adding shine and depth without the commitment of traditional dyes. Perfect for clients looking to refresh their look with a subtle touch of color or add a glossy shine to their natural shade.",
+        bleachHeader: "Bleach & Lightening (prices vary depending on hair length and volume)",
+        bleachPrice: "+¥4,400",
+        bleachDesc: "Achieve the perfect blonde or lightened look with our professional bleach service. Whether you're going for a full platinum transformation or subtle highlights, we carefully lighten your hair to the desired shade while maintaining its strength and health.",
+        permHeader: "Perm Styling (Rod or Iron) (prices vary depending on hair length and volume)",
+        permPrice: "+¥4,500",
+        permDesc: "Add texture, volume, or wave to your style with our customizable perm service. Whether you're after natural curls with rods or a more defined shape using irons, we tailor the technique to suit your hair length and condition.",
+        specialPermHeader: "Special Perm Styling (Twist, Spiral, etc) (prices vary depending on hair length and volume)",
+        specialPermPrice: "+¥6,500",
+        specialPermDesc: "Take your style to the next level with our special perm techniques. From tight twists to flowing spirals, these advanced styles add bold texture and personality to your hair.",
+        hairStraighteningHeader: "Hair Straightening (prices vary depending on hair length and volume)",
+        hairStraighteningPrice: "+¥10,000",
+        hairStraighteningDesc: "Smooth, sleek, and long-lasting—our hair straightening service tames frizz and transforms waves or curls into a polished, straight finish.",
+        pointPermHeader: "Point Perms (prices vary depending on hair length and volume)",
+        pointPermPrice: "+¥2,500",
+        pointPermDesc: "Add volume or texture exactly where you need it with our point perm service. Whether it's lifting the roots, shaping the bangs, or adding movement to specific areas, this targeted treatment enhances your hairstyle without a full perm.",
+        ladiesShaveHeader: "Ladies Shave (prices vary depending on hair length and volume)",
+        ladiesShavePrice: "+¥3,630",
+        ladiesShaveDesc: "A gentle, professional shave that leaves your skin smooth, refreshed, and glowing.",
 
         // Booking Page
         bookingDesc: "Give us a call to reserve your spot. We're happy to help you find the perfect time. Call us at",
         bookingNum: "03-1234-5678",
+        selectedCourse: "No course selected yet.",
+        selectedDesc: "You can still book without choosing a course—just give us a call, and we'll help you decide or set up your appointment.",
     },
 
     jp: {
@@ -197,6 +265,47 @@ const translation = {
         basicCutHeaderEs: "ベーシックカットコース（小学生）",
         basicCutPriceEs: "¥3,850(25%オフ)",
         basicCutDescEs: "カット＋シャンプー＋クイックマッサージ＋シェービング",
+        headCourseHeader: "ヘッドコース",
+        headCoursePrice: "¥6,100",
+        headCourseDesc: "ベーシック + 頭皮クレンジング + マッサージシャンプー + 頭皮トリートメント",
+        faceCourseHeader: "フェイスコース",
+        faceCoursePrice: "¥6,870",
+        faceCourseDesc: "ベーシック + フェイスクレンジング + スチームシェービング + フェイスマッサージ + パック",
+        cutOnlyHeader: "カットのみ",
+        cutOnlyPrice: "¥3,410",
+        cutOnlyDesc: "カットだけのシンプルなコース。さっと整えて、すっきりしたい方におすすめ。",
+        cutOnlyHeaderStu: "カットのみ（学生）",
+        cutOnlyPriceStu: "¥3,300 (¥110オフ)",
+        cutOnlyDescStu: "カットだけのシンプルなコース。余計なサービスは不要、サッと整えたい学生におすすめ。",
+        hairColoringHeader: "ヘアカラー（長さ・量により料金変動）",
+        hairColoringPrice: "+¥3,500",
+        hairColoringDesc: "あなたのスタイルに合わせたプロのカラーリングで印象チェンジ。大胆なカラーチェンジから自然なリタッチまで、カットと調和する清潔感のある仕上がりに整えます。",
+        grayBlendingHeader: "白髪ぼかし（長さ・量により料金変動）",
+        grayBlendingPrice: "+¥2,200",
+        grayBlendingDesc: "白髪を自然になじませることで、若々しく清潔感のある印象に。全体染めのような強い仕上がりではなく、地毛との自然なバランスでやわらかく整えます。",
+        hairManicureHeader: "ヘアマニキュア（長さ・量により料金変動）",
+        hairManucurePrice: "+¥4,400",
+        hairManicureDesc: "髪にやさしい半永久的なカラーで、つやと深みをプラス。髪の表面をコーティングすることで、ダメージを抑えながら自然な色味や輝きを与えます。ナチュラルな色味を整えたい方や、髪にツヤを出したい方におすすめです。",
+        bleachHeader: "ブリーチ・ライトニング（長さ・量により料金変動）",
+        bleachPrice: "+¥4,400",
+        bleachDesc: "全体のハイトーンからハイライトまで、理想の明るさに近づけるプロのブリーチ技術。髪のコンディションを保ちながら、しっかりと色を抜いて仕上げます。明るめのスタイルにチャレンジしたい方におすすめです。",
+        permHeader: "パーマスタイリング（ロッド・アイロン｜長さ・量により料金変動）",
+        permPrice: "+¥4,500",
+        permDesc: "ロッドで自然なカールを、アイロンでしっかりとした形を。髪の長さや状態に合わせて、ボリューム感や動きを加えるパーマスタイルをご提案します。",
+        specialPermHeader: "特殊パーマ（ツイスト・スパイラル等｜長さ・量により料金変動）",
+        specialPermPrice: "+¥6,500",
+        specialPermDesc: "ツイストやスパイラルなど、個性を際立たせる特殊パーマでワンランク上のスタイルへ。力強い動きと立体感で、印象に残るヘアに仕上げます。",
+        hairStraighteningHeader: "ストレートパーマ（長さ・量により料金変動）",
+        hairStraighteningPrice: "+¥10,000",
+        hairStraighteningDesc: "うねりやくせ毛を抑え、まとまりのある自然なストレートヘアに。持続性のある仕上がりで、清潔感と洗練された印象を与えます。",
+        pointPermHeader: "ポイントパーマ（長さ・量により料金変動）",
+        pointPermPrice: "+¥2,500",
+        pointPermDesc: "必要な部分にだけボリュームや動きを加えるポイントパーマ。根元の立ち上げ、前髪の形作り、特定の部分に動きを出すなど、部分的にスタイルを強調できます。",
+        ladiesShaveHeader: "レディースシェービング（長さ・量により料金変動）",
+        ladiesShavePrice: "+¥3,630",
+        ladiesShaveDesc: "A肌を滑らかに、リフレッシュさせる優しいプロのシェービング。シェービング後はしっとりとした仕上がりで、明るく輝く肌を実感できます。",
+        selectedCourse: "現在、コースは選択されていません。",
+        selectedDesc: "コースを選ばずにご予約いただくことも可能です。お電話いただければ、ご希望に合わせてご案内いたします。",
 
         // Booking Page
         bookingDesc: "ご予約はお電話でどうぞ。ご希望の時間をご案内いたします。お電話はこちら：",
@@ -204,26 +313,6 @@ const translation = {
     },
 
 };
-
-// Menu Page Btns
-if(document.body.classList.contains("menu-page")){
-    const basicCut = document.getElementById("basic-cut");
-    basicCut.addEventListener("click", () => {
-        window.location.href = "booking.html?course=basiccut";
-    });
-}
-
-// Booking Page
-if(document.body.classList.contains("booking-page")){
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("course")
-
-    if(query === "basiccut"){
-        selectedCourse.innerText = `${translation.jp.basicCutHeader}`;
-        selectedPrice.innerText =  `${translation.jp.basicCutPrice}`;
-        selectedDesc.innerText = `${translation.jp.basicCutDesc}`;
-    }
-}
 
 enBtn.addEventListener("click", () => {
 
@@ -285,11 +374,145 @@ enBtn.addEventListener("click", () => {
         basicCutHeaderEs.innerText = translation.en.basicCutHeaderEs;
         basicCutPriceEs.innerText = translation.en.basicCutPriceEs;
         basicCutDescEs.innerText = translation.en.basicCutDescEs;
+        headCourseHeader.innerText = translation.en.headCourseHeader;
+        headCourseDesc.innerText =  translation.en.headCourseDesc;
+        faceCourseHeader.innerText = translation.en.faceCourseHeader;
+        faceCourseDesc.innerText = translation.en.faceCourseDesc;
+        cutOnlyHeader.innerText = translation.en.cutOnlyHeader;
+        cutOnlyDesc.innerText = translation.en.cutOnlyDesc;
+        cutOnlyHeaderStu.innerText = translation.en.cutOnlyHeaderStu;
+        cutOnlyPriceStu.innerText = translation.en.cutOnlyPriceStu;
+        cutOnlyDescStu.innerText = translation.en.cutOnlyDescStu;
+        hairColoringHeader.innerText = translation.en.hairColoringHeader;
+        hairColoringDesc.innerText = translation.en.hairColoringDesc;
+        grayBlendingHeader.innerText = translation.en.grayBlendingHeader;
+        grayBlendingDesc.innerText = translation.en.grayBlendingDesc;
+        hairManicureHeader.innerText = translation.en.hairManicureHeader;
+        hairManicureDesc.innerText = translation.en.hairManicureDesc;
+        bleachHeader.innerText = translation.en.bleachHeader;
+        bleachDesc.innerText = translation.en.bleachDesc;
+        permHeader.innerText = translation.en.permHeader;
+        permDesc.innerText = translation.en.permDesc;
+        specialPermHeader.innerText = translation.en.specialPermHeader;
+        specialPermDesc.innerText = translation.en.specialPermDesc;
+        hairStraighteningHeader.innerText = translation.en.hairStraighteningHeader;
+        hairStraighteningDesc.innerText = translation.en.hairStraighteningDesc;
+        pointPermHeader.innerText = translation.en.pointPermHeader;
+        pointPermDesc.innerText = translation.en.pointPermDesc;
+        ladiesShaveHeader.innerText = translation.en.ladiesShaveHeader;
+        ladiesShaveDesc.innerText = translation.en.ladiesShaveDesc;
     }
 
     // Booking Page
     if(document.body.classList.contains("booking-page")){
         bookingDesc.innerHTML = `${translation.en.bookingDesc}<a href="tel:0312345678" id="booking-num"> ${translation.en.bookingNum}</a>`;
+        selectedCourse.innerText = translation.en.selectedCourse;
+        selectedDesc.innerText = translation.en.selectedDesc;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get("course");
+
+        if(query === "basiccut"){
+            selectedCourse.innerText = `${translation.en.basicCutHeader}`;
+            selectedPrice.innerText =  `${translation.en.basicCutPrice}`;
+            selectedDesc.innerText = `${translation.en.basicCutDesc}`;
+        }
+
+        if(query === "basiccuths"){
+            selectedCourse.innerText = `${translation.en.basicCutHeaderHs}`;
+            selectedPrice.innerText =  `${translation.en.basicCutPriceHs}`;
+            selectedDesc.innerText = `${translation.en.basicCutDescHs}`;
+        }
+
+        if(query === "basiccutjhs"){
+            selectedCourse.innerText = `${translation.en.basicCutHeaderJhs}`;
+            selectedPrice.innerText =  `${translation.en.basicCutPriceJhs}`;
+            selectedDesc.innerText = `${translation.en.basicCutDescJhs}`;
+        }
+
+        if(query === "basiccutes"){
+            selectedCourse.innerText = `${translation.en.basicCutHeaderEs}`;
+            selectedPrice.innerText =  `${translation.en.basicCutPriceEs}`;
+            selectedDesc.innerText = `${translation.en.basicCutDescEs}`;
+        }
+
+        if(query === "headcourse"){
+            selectedCourse.innerText = `${translation.en.headCourseHeader}`;
+            selectedPrice.innerText =  `${translation.en.headCoursePrice}`;
+            selectedDesc.innerText = `${translation.en.headCourseDesc}`;
+        }
+
+        if(query === "facecourse"){
+            selectedCourse.innerText = `${translation.en.faceCourseHeader}`;
+            selectedPrice.innerText =  `${translation.en.faceCoursePrice}`;
+            selectedDesc.innerText = `${translation.en.faceCourseDesc}`;
+        }
+
+        if(query === "cutonly"){
+            selectedCourse.innerText = `${translation.en.cutOnlyHeader}`;
+            selectedPrice.innerText =  `${translation.en.cutOnlyPrice}`;
+            selectedDesc.innerText = `${translation.en.cutOnlyDesc}`;
+        }
+
+        if(query === "cutonlystu"){
+            selectedCourse.innerText = `${translation.en.cutOnlyHeaderStu}`;
+            selectedPrice.innerText =  `${translation.en.cutOnlyPriceStu}`;
+            selectedDesc.innerText = `${translation.en.cutOnlyDescStu}`;
+        }
+
+        if(query === "haircoloring"){
+            selectedCourse.innerText = `${translation.en.hairColoringHeader}`;
+            selectedPrice.innerText =  `${translation.en.hairColoringPrice}`;
+            selectedDesc.innerText = `${translation.en.hairColoringDesc}`;
+        }
+
+        if(query === "grayblending"){
+            selectedCourse.innerText = `${translation.en.grayBlendingHeader}`;
+            selectedPrice.innerText =  `${translation.en.grayBlendingPrice}`;
+            selectedDesc.innerText = `${translation.en.grayBlendingDesc}`;
+        }
+
+        if(query === "manicure"){
+            selectedCourse.innerText = `${translation.en.hairManicureHeader}`;
+            selectedPrice.innerText =  `${translation.en.hairManucurePrice}`;
+            selectedDesc.innerText = `${translation.en.hairManicureDesc}`;
+        }
+
+        if(query === "bleach"){
+            selectedCourse.innerText = `${translation.en.bleachHeader}`;
+            selectedPrice.innerText =  `${translation.en.bleachPrice}`;
+            selectedDesc.innerText = `${translation.en.bleachDesc}`;
+        }
+
+        if(query === "perm"){
+            selectedCourse.innerText = `${translation.en.permHeader}`;
+            selectedPrice.innerText =  `${translation.en.permPrice}`;
+            selectedDesc.innerText = `${translation.en.permDesc}`;
+        }
+
+        if(query === "specialperm"){
+            selectedCourse.innerText = `${translation.en.specialPermHeader}`;
+            selectedPrice.innerText =  `${translation.en.specialPermPrice}`;
+            selectedDesc.innerText = `${translation.en.specialPermDesc}`;
+        }
+
+        if(query === "hairstraightening"){
+            selectedCourse.innerText = `${translation.en.hairStraighteningHeader}`;
+            selectedPrice.innerText =  `${translation.en.hairStraighteningPrice}`;
+            selectedDesc.innerText = `${translation.en.hairStraighteningDesc}`;
+        }
+
+        if(query === "pointperm"){
+            selectedCourse.innerText = `${translation.en.pointPermHeader}`;
+            selectedPrice.innerText =  `${translation.en.pointPermPrice}`;
+            selectedDesc.innerText = `${translation.en.pointPermDesc}`;
+        }
+
+        if(query === "ladiesshave"){
+            selectedCourse.innerText = `${translation.en.ladiesShaveHeader}`;
+            selectedPrice.innerText =  `${translation.en.ladiesShavePrice}`;
+            selectedDesc.innerText = `${translation.en.ladiesShaveDesc}`;
+        }
     }
 
 });
@@ -314,7 +537,7 @@ jpBtn.addEventListener("click", () => {
     if(document.body.classList.contains("subheader-page")){
         subheader.innerHTML = `
         ${translation.jp.subheaderBeforeLink}<a href="menu.html" id="styles-page-subheader-link">${translation.jp.subheaderLinkText}</a>${translation.jp.subheaderAfterLink}`;
-    };
+    }
 
     // Team Page
     if(document.body.classList.contains("team-page")){
@@ -354,13 +577,341 @@ jpBtn.addEventListener("click", () => {
         basicCutHeaderEs.innerText = translation.jp.basicCutHeaderEs;
         basicCutPriceEs.innerText = translation.jp.basicCutPriceEs;
         basicCutDescEs.innerText = translation.jp.basicCutDescEs;
+        headCourseHeader.innerText = translation.jp.headCourseHeader;
+        headCourseDesc.innerText =  translation.jp.headCourseDesc;
+        faceCourseHeader.innerText = translation.jp.faceCourseHeader;
+        faceCourseDesc.innerText = translation.jp.faceCourseDesc;
+        cutOnlyHeader.innerText = translation.jp.cutOnlyHeader;
+        cutOnlyDesc.innerText = translation.jp.cutOnlyDesc;
+        cutOnlyHeaderStu.innerText = translation.jp.cutOnlyHeaderStu;
+        cutOnlyPriceStu.innerText = translation.jp.cutOnlyPriceStu;
+        cutOnlyDescStu.innerText = translation.jp.cutOnlyDescStu;
+        hairColoringHeader.innerText = translation.jp.hairColoringHeader;
+        hairColoringDesc.innerText = translation.jp.hairColoringDesc;
+        grayBlendingHeader.innerText = translation.jp.grayBlendingHeader;
+        grayBlendingDesc.innerText = translation.jp.grayBlendingDesc;
+        hairManicureHeader.innerText = translation.jp.hairManicureHeader;
+        hairManicureDesc.innerText = translation.jp.hairManicureDesc;
+        bleachHeader.innerText = translation.jp.bleachHeader;
+        bleachDesc.innerText = translation.jp.bleachDesc;
+        permHeader.innerText = translation.jp.permHeader;
+        permDesc.innerText = translation.jp.permDesc;
+        specialPermHeader.innerText = translation.jp.specialPermHeader;
+        specialPermDesc.innerText = translation.jp.specialPermDesc;
+        hairStraighteningHeader.innerText = translation.jp.hairStraighteningHeader;
+        hairStraighteningDesc.innerText = translation.jp.hairStraighteningDesc;
+        pointPermHeader.innerText = translation.jp.pointPermHeader;
+        pointPermDesc.innerText = translation.jp.pointPermDesc;
+        ladiesShaveHeader.innerText = translation.jp.ladiesShaveHeader;
+        ladiesShaveDesc.innerText = translation.jp.ladiesShaveDesc;
     }
 
     // Booking Page
     if(document.body.classList.contains("booking-page")){
         bookingDesc.innerHTML = `${translation.jp.bookingDesc}<a href="tel:0312345678" id="booking-num">${translation.jp.bookingNum}</a>`;
+        selectedCourse.innerText = translation.jp.selectedCourse;
+        selectedDesc.innerText = translation.jp.selectedDesc;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get("course");
+
+        if(query === "basiccut"){
+            selectedCourse.innerText = `${translation.jp.basicCutHeader}`;
+            selectedPrice.innerText =  `${translation.jp.basicCutPrice}`;
+            selectedDesc.innerText = `${translation.jp.basicCutDesc}`;
+        }
+
+        if(query === "basiccuths"){
+            selectedCourse.innerText = `${translation.jp.basicCutHeaderHs}`;
+            selectedPrice.innerText =  `${translation.jp.basicCutPriceHs}`;
+            selectedDesc.innerText = `${translation.jp.basicCutDescHs}`;
+        }
+
+        if(query === "basiccutjhs"){
+            selectedCourse.innerText = `${translation.jp.basicCutHeaderJhs}`;
+            selectedPrice.innerText =  `${translation.jp.basicCutPriceJhs}`;
+            selectedDesc.innerText = `${translation.jp.basicCutDescJhs}`;
+        }
+
+        if(query === "basiccutes"){
+            selectedCourse.innerText = `${translation.jp.basicCutHeaderEs}`;
+            selectedPrice.innerText =  `${translation.jp.basicCutPriceEs}`;
+            selectedDesc.innerText = `${translation.jp.basicCutDescEs}`;
+        }
+
+        if(query === "headcourse"){
+            selectedCourse.innerText = `${translation.jp.headCourseHeader}`;
+            selectedPrice.innerText =  `${translation.jp.headCoursePrice}`;
+            selectedDesc.innerText = `${translation.jp.headCourseDesc}`;
+        }
+
+        if(query === "facecourse"){
+            selectedCourse.innerText = `${translation.jp.faceCourseHeader}`;
+            selectedPrice.innerText =  `${translation.jp.faceCoursePrice}`;
+            selectedDesc.innerText = `${translation.jp.faceCourseDesc}`;
+        }
+
+        if(query === "cutonly"){
+            selectedCourse.innerText = `${translation.jp.cutOnlyHeader}`;
+            selectedPrice.innerText =  `${translation.jp.cutOnlyPrice}`;
+            selectedDesc.innerText = `${translation.jp.cutOnlyDesc}`;
+        }
+
+        if(query === "cutonlystu"){
+            selectedCourse.innerText = `${translation.jp.cutOnlyHeaderStu}`;
+            selectedPrice.innerText =  `${translation.jp.cutOnlyPriceStu}`;
+            selectedDesc.innerText = `${translation.jp.cutOnlyDescStu}`;
+        }
+
+        if(query === "haircoloring"){
+            selectedCourse.innerText = `${translation.jp.hairColoringHeader}`;
+            selectedPrice.innerText =  `${translation.jp.hairColoringPrice}`;
+            selectedDesc.innerText = `${translation.jp.hairColoringDesc}`;
+        }
+
+        if(query === "grayblending"){
+            selectedCourse.innerText = `${translation.jp.grayBlendingHeader}`;
+            selectedPrice.innerText =  `${translation.jp.grayBlendingPrice}`;
+            selectedDesc.innerText = `${translation.jp.grayBlendingDesc}`;
+        }
+
+        if(query === "manicure"){
+            selectedCourse.innerText = `${translation.jp.hairManicureHeader}`;
+            selectedPrice.innerText =  `${translation.jp.hairManucurePrice}`;
+            selectedDesc.innerText = `${translation.jp.hairManicureDesc}`;
+        }
+
+        if(query === "bleach"){
+            selectedCourse.innerText = `${translation.jp.bleachHeader}`;
+            selectedPrice.innerText =  `${translation.jp.bleachPrice}`;
+            selectedDesc.innerText = `${translation.jp.bleachDesc}`;
+        }
+
+        if(query === "perm"){
+            selectedCourse.innerText = `${translation.jp.permHeader}`;
+            selectedPrice.innerText =  `${translation.jp.permPrice}`;
+            selectedDesc.innerText = `${translation.jp.permDesc}`;
+        }
+
+        if(query === "specialperm"){
+            selectedCourse.innerText = `${translation.jp.specialPermHeader}`;
+            selectedPrice.innerText =  `${translation.jp.specialPermPrice}`;
+            selectedDesc.innerText = `${translation.jp.specialPermDesc}`;
+        }
+
+        if(query === "hairstraightening"){
+            selectedCourse.innerText = `${translation.jp.hairStraighteningHeader}`;
+            selectedPrice.innerText =  `${translation.jp.hairStraighteningPrice}`;
+            selectedDesc.innerText = `${translation.jp.hairStraighteningDesc}`;
+        }
+
+        if(query === "pointperm"){
+            selectedCourse.innerText = `${translation.jp.pointPermHeader}`;
+            selectedPrice.innerText =  `${translation.jp.pointPermPrice}`;
+            selectedDesc.innerText = `${translation.jp.pointPermDesc}`;
+        }
+
+        if(query === "ladiesshave"){
+            selectedCourse.innerText = `${translation.jp.ladiesShaveHeader}`;
+            selectedPrice.innerText =  `${translation.jp.ladiesShavePrice}`;
+            selectedDesc.innerText = `${translation.jp.ladiesShaveDesc}`;
+        }
     }
 
 });
 
+// Menu Page Btns
+if(document.body.classList.contains("menu-page")){
+    const basicCut = document.getElementById("basic-cut-btn");
+    basicCut.addEventListener("click", () => {
+        window.location.href = "booking.html?course=basiccut";
+    });
 
+    const basicCutBtnHs = document.getElementById("basic-cut-btn-hs");
+    basicCutBtnHs.addEventListener("click", () => {
+        window.location.href = "booking.html?course=basiccuths";
+    });
+
+    const basicCutBtnJhs = document.getElementById("basic-cut-btn-jhs");
+    basicCutBtnJhs.addEventListener("click", () => {
+        window.location.href = "booking.html?course=basiccutjhs";
+    });
+
+    const basicCutBtnEs = document.getElementById("basic-cut-btn-es");
+    basicCutBtnEs.addEventListener("click", () => {
+        window.location.href = "booking.html?course=basiccutes";
+    });
+
+    const headCourseBtn = document.getElementById("head-course-btn");
+    headCourseBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=headcourse";
+    });
+
+    const faceCourseBtn = document.getElementById("face-course-btn");
+    faceCourseBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=facecourse";
+    });
+
+    const cutOnlyBtn = document.getElementById("cut-only-btn");
+    cutOnlyBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=cutonly";
+    });
+
+    const cutOnlyBtnStu = document.getElementById("cut-only-btn-stu");
+    cutOnlyBtnStu.addEventListener("click", () => {
+        window.location.href = "booking.html?course=cutonlystu";
+    });
+
+    const hairColoringBtn = document.getElementById("hair-coloring-btn");
+    hairColoringBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=haircoloring";
+    });
+
+    const grayBlendingBtn = document.getElementById("gray-blending-btn");
+    grayBlendingBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=grayblending";
+    });
+
+    const manicureBtn = document.getElementById("manicure-btn");
+    manicureBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=manicure";
+    });
+
+    const bleachBtn = document.getElementById("bleach-btn");
+    bleachBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=bleach";
+    });
+
+    const permBtn = document.getElementById("perm-btn");
+    permBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=perm";
+    });
+
+    const specialPermBtn = document.getElementById("special-perm-btn");
+    specialPermBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=specialperm";
+    });
+
+    const straighteningBtn = document.getElementById("straightening-btn");
+    straighteningBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=hairstraightening";
+    });
+
+    const pointPermBtn = document.getElementById("point-perm-btn");
+    pointPermBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=pointperm";
+    });
+
+    const ladiesShaveBtn = document.getElementById("ladies-shave-btn");
+    ladiesShaveBtn.addEventListener("click", () => {
+        window.location.href = "booking.html?course=ladiesshave";
+    });
+}
+
+// Booking Page
+if(document.body.classList.contains("booking-page")){
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get("course")
+
+    if(query === "basiccut"){
+        selectedCourse.innerText = `${translation.jp.basicCutHeader}`;
+        selectedPrice.innerText =  `${translation.jp.basicCutPrice}`;
+        selectedDesc.innerText = `${translation.jp.basicCutDesc}`;
+    }
+
+    if(query === "basiccuths"){
+        selectedCourse.innerText = `${translation.jp.basicCutHeaderHs}`;
+        selectedPrice.innerText =  `${translation.jp.basicCutPriceHs}`;
+        selectedDesc.innerText = `${translation.jp.basicCutDescHs}`;
+    }
+
+    if(query === "basiccutjhs"){
+        selectedCourse.innerText = `${translation.jp.basicCutHeaderJhs}`;
+        selectedPrice.innerText =  `${translation.jp.basicCutPriceJhs}`;
+        selectedDesc.innerText = `${translation.jp.basicCutDescJhs}`;
+    }
+
+    if(query === "basiccutes"){
+        selectedCourse.innerText = `${translation.jp.basicCutHeaderEs}`;
+        selectedPrice.innerText =  `${translation.jp.basicCutPriceEs}`;
+        selectedDesc.innerText = `${translation.jp.basicCutDescEs}`;
+    }
+
+    if(query === "headcourse"){
+        selectedCourse.innerText = `${translation.jp.headCourseHeader}`;
+        selectedPrice.innerText =  `${translation.jp.headCoursePrice}`;
+        selectedDesc.innerText = `${translation.jp.headCourseDesc}`;
+    }
+
+    if(query === "facecourse"){
+        selectedCourse.innerText = `${translation.jp.faceCourseHeader}`;
+        selectedPrice.innerText =  `${translation.jp.faceCoursePrice}`;
+        selectedDesc.innerText = `${translation.jp.faceCourseDesc}`;
+    }
+
+    if(query === "cutonly"){
+        selectedCourse.innerText = `${translation.jp.cutOnlyHeader}`;
+        selectedPrice.innerText =  `${translation.jp.cutOnlyPrice}`;
+        selectedDesc.innerText = `${translation.jp.cutOnlyDesc}`;
+    }
+
+    if(query === "cutonlystu"){
+        selectedCourse.innerText = `${translation.jp.cutOnlyHeaderStu}`;
+        selectedPrice.innerText =  `${translation.jp.cutOnlyPriceStu}`;
+        selectedDesc.innerText = `${translation.jp.cutOnlyDescStu}`;
+    }
+
+    if(query === "haircoloring"){
+        selectedCourse.innerText = `${translation.jp.hairColoringHeader}`;
+        selectedPrice.innerText =  `${translation.jp.hairColoringPrice}`;
+        selectedDesc.innerText = `${translation.jp.hairColoringDesc}`;
+    }
+
+    if(query === "grayblending"){
+        selectedCourse.innerText = `${translation.jp.grayBlendingHeader}`;
+        selectedPrice.innerText =  `${translation.jp.grayBlendingPrice}`;
+        selectedDesc.innerText = `${translation.jp.grayBlendingDesc}`;
+    }
+
+    if(query === "manicure"){
+        selectedCourse.innerText = `${translation.jp.hairManicureHeader}`;
+        selectedPrice.innerText =  `${translation.jp.hairManucurePrice}`;
+        selectedDesc.innerText = `${translation.jp.hairManicureDesc}`;
+    }
+
+    if(query === "bleach"){
+        selectedCourse.innerText = `${translation.jp.bleachHeader}`;
+        selectedPrice.innerText =  `${translation.jp.bleachPrice}`;
+        selectedDesc.innerText = `${translation.jp.bleachDesc}`;
+    }
+
+    if(query === "perm"){
+        selectedCourse.innerText = `${translation.jp.permHeader}`;
+        selectedPrice.innerText =  `${translation.jp.permPrice}`;
+        selectedDesc.innerText = `${translation.jp.permDesc}`;
+    }
+
+    if(query === "specialperm"){
+        selectedCourse.innerText = `${translation.jp.specialPermHeader}`;
+        selectedPrice.innerText =  `${translation.jp.specialPermPrice}`;
+        selectedDesc.innerText = `${translation.jp.specialPermDesc}`;
+    }
+
+    if(query === "hairstraightening"){
+        selectedCourse.innerText = `${translation.jp.hairStraighteningHeader}`;
+        selectedPrice.innerText =  `${translation.jp.hairStraighteningPrice}`;
+        selectedDesc.innerText = `${translation.jp.hairStraighteningDesc}`;
+    }
+
+    if(query === "pointperm"){
+        selectedCourse.innerText = `${translation.jp.pointPermHeader}`;
+        selectedPrice.innerText =  `${translation.jp.pointPermPrice}`;
+        selectedDesc.innerText = `${translation.jp.pointPermDesc}`;
+    }
+
+    if(query === "ladiesshave"){
+        selectedCourse.innerText = `${translation.jp.ladiesShaveHeader}`;
+        selectedPrice.innerText =  `${translation.jp.ladiesShavePrice}`;
+        selectedDesc.innerText = `${translation.jp.ladiesShaveDesc}`;
+    }
+}
