@@ -76,8 +76,9 @@ section{
 }
 
 #logo{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
 }
 
 #logo-container{
@@ -109,7 +110,7 @@ header{
 
 .sub {
     font-size: 15px;
-    color: #888;
+    color: var(--sub-color);
     display: block;
 }
 
@@ -233,7 +234,7 @@ header{
 
 /* Start of Subheader */
 .subheader{
-    background-color: #36454f;
+    background-color: var(--wrap-color);
     margin: 0px;
     padding: 20px;
     color: white;
@@ -278,7 +279,7 @@ header{
     padding-bottom: 10px;
     cursor: pointer;
     font-weight: bold;
-    background-color: rgb(255, 60, 60);
+    background-color: var(--button-color);
     color: white;
     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);
 }
@@ -289,24 +290,12 @@ header{
     object-fit: cover;
     object-position: center;
 }
-
-.desc-styles-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    grid-template-areas: 
-    "desc-img desc-text-container"
-    "styles-desc-container styles-img";
-    background-color: white;
-    padding: 4rem;
-    align-items: center;
-}
 /* End of Hero */
 
 /* Start of Reviews */
 #reviews-wrap{
     text-align: center;
-    background-color: #36454f;
+    background-color: var(--wrap-color);
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -367,6 +356,18 @@ header{
 /* End of Reviews */
 
 /* Start of Desc */
+.desc-styles-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas: 
+    "desc-img desc-text-container"
+    "styles-desc-container styles-img";
+    background-color: white;
+    padding: 4rem;
+    align-items: center;
+}
+
 #desc-img{
     max-width: 600px;
     grid-area: desc-img;
@@ -426,7 +427,7 @@ header{
 .container-buttons{
     width: 200px;
     border: none;
-    background-color: rgb(255, 60, 60);
+    background-color: var(--button-color);
     height: 35px;
     border-radius: 10px;
     color: white;
@@ -508,7 +509,7 @@ footer{
 }
 
 #styles-page-subheader{
-    background-color: #36454f;
+    background-color: var(--sub-color);
     margin: 0px;
     padding: 20px;
     color: white;
@@ -555,7 +556,7 @@ footer{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
     margin: 50px;
 }
@@ -565,7 +566,7 @@ footer{
 }
 
 .team-card p {
-    color: #595959;
+    color: var(--desc-color);
     font-size: clamp(16px, 3.5vw, 20px);
 }
 
@@ -665,7 +666,7 @@ footer{
     padding-bottom: 10px;
     cursor: pointer;
     font-weight: bold;
-    background-color: rgb(255, 60, 60);
+    background-color: var(--button-color);
     color: white;
     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.4);
     cursor: pointer;
@@ -685,7 +686,7 @@ footer{
 }
 
 .course-card-desc-container h2{
-    color: #d4af37;
+    color: var(--gold-color);
     font-size: clamp(20px, 4vw, 28px);
 }
 
@@ -711,7 +712,7 @@ footer{
 }
 
 #menu-page-subheader{
-    background-color: #36454f;
+    background-color: var(--wrap-color);
     margin: 0px;
     padding: 20px;
     color: white;
@@ -803,7 +804,6 @@ footer{
         margin-right: 10px;
         margin-left: auto;
     }
-
 }
 
 @media (max-width: 992px) {
@@ -835,7 +835,6 @@ footer{
         gap: 10px;
         text-align: center;
     }
-
 }
 
 @media (max-width: 990px){
@@ -850,12 +849,16 @@ footer{
     #location-page-container{
         min-height: 80dvh;
     }
-    
 }
 
 @media (max-width: 640px) {
     #site-name{
         display: none;
+    }
+
+    #logo{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     #menu-card-container{
@@ -890,8 +893,6 @@ footer{
         max-width: 475px;
         right: -480px;
     }
-
-
 }
 
 @media (max-width: 425px) {
@@ -915,8 +916,6 @@ footer{
     #styles-page-grid{
         margin-bottom: 10px;
     }
-
-
 }
 
 @media (max-width: 320px) {
