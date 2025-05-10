@@ -4,6 +4,10 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 :root {
     --wrap-color: #36454f;
     --button-color: rgb(255, 60, 60);
@@ -776,10 +780,6 @@ footer{
     margin: 0 auto;
 }    
 
-@media (max-width: 1440px) {
-
-}
-
 @media (min-width: 1281px) {
     .off-screen-menu{
         display: none;
@@ -837,10 +837,6 @@ footer{
     }
 }
 
-@media (max-width: 990px){
-
-}
-  
 @media (max-width: 768px) {
     #team-page-cards-container{
         flex-wrap: wrap;

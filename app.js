@@ -72,7 +72,6 @@ const pointPermDesc = document.getElementById("point-perm-desc");
 const ladiesShaveHeader = document.getElementById("ladies-shave-header");
 const ladiesShaveDesc = document.getElementById("ladies-shave-desc");
 const bookingNum = document.getElementById("booking-num");
-
 const selectedCourse = document.getElementById("selected-course");
 const selectedPrice = document.getElementById("selected-price");
 const selectedDesc = document.getElementById("selected-desc");
@@ -82,6 +81,7 @@ hamMenu.addEventListener("click", () => {
     hamMenu.classList.toggle("active");
     offScreenMenu.classList.toggle("active"); 
     pageContent.classList.toggle('menu-open');
+    document.body.classList.toggle("no-scroll");
 });
 
 // Home Page
@@ -250,9 +250,9 @@ const translation = {
 
         // Menu Page 
         menuDesc: "カットやシェービングなど多彩なメニューをご用意。学生証提示で割引あり。",
-        menuPageSubheaderBeforeLink: "最新のスタイルやショップ情報は",
+        menuPageSubheaderBeforeLink: "最新のスタイルやショップ情報は ",
         menuPageSubheaderLink: "Instagram",
-        menuPageSubheaderAfterLink: "でチェック — フォローもお忘れなく!",
+        menuPageSubheaderAfterLink: " でチェック — フォローもお忘れなく!",
         basicCutHeader: "ベーシックカットコース",
         basicCutPrice: "¥5,000",
         basicCutDesc: "カット＋シャンプー＋クイックマッサージ＋シェービング",
