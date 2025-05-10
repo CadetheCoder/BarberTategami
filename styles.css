@@ -886,6 +886,16 @@ footer{
     }
 }
 
+@media (max-width: 480px) {
+    #hero-img-container{
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 400px;
+        aspect-ratio: 951 / 700;
+    }
+}
+
 @media (max-width: 475px) {
     .off-screen-menu{
         max-width: 475px;
