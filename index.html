@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="images/logo.webp">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="images/IMG_03.webp" as="image">
   <link rel="preload" href="images/IMG_03_mobile.webp" as="image" media="(max-width: 480px)">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  </noscript>
+  <link rel="icon" type="image/png" href="images/logo.webp">
   <script src="https://kit.fontawesome.com/91d048407d.js" crossorigin="anonymous" defer></script>
   <script src="app.js" defer></script>
   <title>barber TATEGAMI</title>
 </head>
+  
 <body class="home-page">
 
   <div class="page-content">
@@ -61,8 +67,8 @@
       <section id="hero">
           <div id="hero-img-container">
             <picture>
-              <source media="(max-width: 480px)" srcset="images/IMG_03_mobile.webp">
-              <img id="hero-img" src="images/IMG_03.webp" alt="Cozy barbershop with wooden floors and barber chairs" loading="eager">
+              <source media="(max-width: 480px)" srcset="images/IMG_03_mobile.webp" width="480" height="700">
+              <img id="hero-img" src="images/IMG_03.webp" alt="Cozy barbershop with wooden floors and barber chairs" loading="eager" width="951" height="700">
             </picture>
             <div id="hero-overlay">
               <h1>Welcome to barber TATEGAMI</h1>
